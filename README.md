@@ -14,7 +14,7 @@ LICENSE          | copyright, license link, etc.
 
 ### Unicorn Me!
 
-> Pink fluffy unicorns, dancing on rainbows
+> Pink fluffy unicorns, dancing on rainbows...
 
 - Andrew Huang, https://www.youtube.com/watch?v=eWM2joNb9NE
 
