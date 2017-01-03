@@ -12,16 +12,22 @@ CAVEATS          | known issues, disclaimers, etc.
 
 LICENSE          | copyright, license link, etc.
 
-## Name
+### Unicorn Me!
 
-> Fun
+> Pink fluffy unicorns, dancing on rainbows
+
+- Andrew Huang, https://www.youtube.com/watch?v=eWM2joNb9NE
 
 ### Overview
+
+This is a library that takes your first name and your last name, and generates you a unicorn name based on a pre-configured list.
+This is definitely something that the world needs, and it needs it right now.
+
 
 ### Examples
 
 ```
-scala code here
+https://s-media-cache-ak0.pinimg.com/736x/0b/88/ec/0b88ec7f891cae19a14585e229cf0147.jpg
 ```
 
 ### Getting library
