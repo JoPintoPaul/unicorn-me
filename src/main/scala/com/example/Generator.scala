@@ -2,14 +2,37 @@ package com.example
 
 class Generator {
 
-  def generateName(firstName: String, dateOfBirth: String): Either[String, String] = {
+  case class UnicornName(firstName: String, lastName: String) {
+    override def toString(): String = s"$firstName $lastName"
+  }
+
+  def generateName(firstName: String, birthMonth: Int): Either[String, UnicornName] = {
     firstName.toLowerCase().headOption match {
       case None => Left("Your first name is too short, must contain at least one letter")
       case Some(key) => unicornFirstNames.get(key) match {
-        case Some(unicornFirstName) => Right(unicornFirstName)
+        case Some(unicornFirstName) =>
+          unicornLastNames.get(birthMonth) match {
+            case Some(unicornLastName) => Right(UnicornName(unicornFirstName, unicornLastName))
+            case None => Left("Oh no, doesn't look like there is a unicorn name for you! You might just have to work a bit " +
+              "harder at being a bit more magic")
+          }
         case None => Left("Oh no, doesn't look like there is a unicorn name for you! You might just have to work a bit " +
           "harder at being a bit more magic")
       }
+    }
+  }
+
+  def generateNameTwo(firstName: String, birthMonth: Int): Either[String, UnicornName] = {
+    firstName.toLowerCase().headOption flatMap { key =>
+      unicornFirstNames.get(key) flatMap { unicornFirstName =>
+        unicornLastNames.get(birthMonth) map { unicornLastName =>
+          UnicornName(unicornFirstName, unicornLastName)
+        }
+      }
+    } match {
+      case Some(unicornName) => Right(unicornName)
+      case None => Left("Oh no, doesn't look like there is a unicorn name for you! You might just have to work a bit " +
+        "harder at being a bit more magic")
     }
   }
 
