@@ -1,17 +1,3 @@
-NAME             | project name as you want it written
-
-FUN              | quote, song lyric, joke, etc.
-
-OVERVIEW         | description / summary
-
-QUICK START      | sbt snippet, version info
-
-DETAILED USEAGE  | working code, snippets + prose
-
-CAVEATS          | known issues, disclaimers, etc.
-
-LICENSE          | copyright, license link, etc.
-
 ### Unicorn Me!
 
 > Pink fluffy unicorns, dancing on rainbows...
@@ -35,6 +21,8 @@ https://s-media-cache-ak0.pinimg.com/736x/0b/88/ec/0b88ec7f891cae19a14585e229cf0
 
 ```scala
 ```
+
+### QUICK START
 
 ### Detailed Information
 
